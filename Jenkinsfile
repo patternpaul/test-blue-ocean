@@ -8,7 +8,7 @@ pipeline {
             sh 'echo blah'
           }
         }
-        stage('') {
+        stage('error') {
           steps {
             sh 'echo wut'
           }
@@ -18,6 +18,16 @@ pipeline {
     stage('deploy') {
       steps {
         sh 'echo weeee'
+      }
+    }
+    stage('sstage') {
+      steps {
+        input 'what'
+      }
+    }
+    stage('') {
+      steps {
+        echo 'stuff'
       }
     }
   }
